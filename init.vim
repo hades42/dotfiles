@@ -7,6 +7,7 @@ source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/ForCP.vim
 source $HOME/.config/nvim/plug-config/fzf.vim 
 source $HOME/.config/nvim/plug-config/NerdComment.vim
+source $HOME/.config/nvim/plug-config/GitIntegration.vim
 
 syntax on 
 set relativenumber
