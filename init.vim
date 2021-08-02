@@ -85,11 +85,18 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+noremap <silent> <A-Left> :vertical resize +3<CR>
+noremap <silent> <A-Right> :vertical resize -3<CR>
+noremap <silent> <A-Up> :resize +3<CR>
+noremap <silent> <A-Down> :resize -3<CR>
+
 
 " Escape terminal 
 :tnoremap <Esc> <C-\><C-n>
 
 "Copy code with CTRL-A
 map <C-a> <esc>ggVG<CR>
+
+
 
 
