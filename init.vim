@@ -5,11 +5,12 @@ source $HOME/.config/nvim/plug-config/NerdTree.vim
 source $HOME/.config/nvim/plug-config/prettier.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/ForCP.vim
-source $HOME/.config/nvim/plug-config/fzf.vim 
 source $HOME/.config/nvim/plug-config/NerdComment.vim
 source $HOME/.config/nvim/plug-config/GitIntegration.vim
+source $HOME/.config/nvim/plug-config/telescope.vim
 
 syntax on 
+set nowrap
 set relativenumber
 set nohlsearch
 set hidden
@@ -50,13 +51,16 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Better Syntax Support
 Plug 'sheerun/vim-polyglot'
+
 " File Explorer
 Plug 'preservim/nerdtree'
+
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
+
 " Fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+
 " File Icon
 Plug 'ryanoasis/vim-devicons'
 " Comment code
@@ -66,6 +70,11 @@ Plug 'preservim/nerdcommenter'
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
+
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 "
