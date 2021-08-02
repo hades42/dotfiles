@@ -5,8 +5,10 @@ source $HOME/.config/nvim/plug-config/NerdTree.vim
 source $HOME/.config/nvim/plug-config/prettier.vim
 source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/ForCP.vim
+source $HOME/.config/nvim/plug-config/fzf.vim 
+source $HOME/.config/nvim/plug-config/NerdComment.vim
 
-syntax enable
+syntax on 
 set relativenumber
 set nohlsearch
 set hidden
@@ -27,6 +29,8 @@ set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
+set encoding=UTF-8
+filetype plugin on
 
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
@@ -49,11 +53,24 @@ Plug 'sheerun/vim-polyglot'
 Plug 'preservim/nerdtree'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" File Icon
+Plug 'ryanoasis/vim-devicons'
+" Comment code
+Plug 'preservim/nerdcommenter'
+
+" Intergration with GIT
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
 
 call plug#end()
 "
 " Theme for most stuff
 colorscheme gruvbox
+let $BAT_THEME='gruvbox'
 
 " enable powerline fonts
 let g:airline_powerline_fonts = 1
