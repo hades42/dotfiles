@@ -7,7 +7,8 @@ source $HOME/.config/nvim/plug-config/airline.vim
 source $HOME/.config/nvim/plug-config/ForCP.vim
 source $HOME/.config/nvim/plug-config/NerdComment.vim
 source $HOME/.config/nvim/plug-config/GitIntegration.vim
-source $HOME/.config/nvim/plug-config/telescope.vim
+source $HOME/.config/nvim/plug-config/fzfConfig.vim
+source $HOME/.config/nvim/plug-config/Telesope.nvim.vim
 
 syntax on 
 set nowrap
@@ -76,6 +77,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 "
 " Theme for most stuff
