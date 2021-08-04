@@ -9,6 +9,7 @@ source $HOME/.config/nvim/plug-config/NerdComment.vim
 source $HOME/.config/nvim/plug-config/GitIntegration.vim
 source $HOME/.config/nvim/plug-config/fzfConfig.vim
 source $HOME/.config/nvim/plug-config/Telesope.nvim.vim
+source $HOME/.config/nvim/plug-config/treeSitter.vim
 
 syntax on 
 set nowrap
@@ -56,9 +57,6 @@ Plug 'sheerun/vim-polyglot'
 " File Explorer
 Plug 'preservim/nerdtree'
 
-" Auto pairs for '(' '[' '{'
-Plug 'jiangmiao/auto-pairs'
-
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
 
@@ -77,8 +75,11 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+"Fuzzy finder
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 call plug#end()
 "
 " Theme for most stuff
@@ -128,5 +129,10 @@ noremap <silent> <A-Down> :resize -3<CR>
 map <C-a> <esc>ggVG<CR>
 
 
-
-
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+}
+EOF
