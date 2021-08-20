@@ -10,12 +10,12 @@ source $HOME/.config/nvim/plug-config/GitIntegration.vim
 source $HOME/.config/nvim/plug-config/fzfConfig.vim
 source $HOME/.config/nvim/plug-config/Telesope.nvim.vim
 source $HOME/.config/nvim/plug-config/treeSitter.vim
+source $HOME/.config/nvim/plug-config/markdown.vim
 
-syntax on 
+"syntax on 
 set nowrap
-set relativenumber
-set nohlsearch
-set hidden
+"set relativenumber
+"set nohlsearch
 set noerrorbells
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -29,8 +29,6 @@ set nu
 set mouse=a
 set ruler
 set clipboard=unnamedplus               " Copy paste between vim and everything else
-set nobackup                            " This is recommended by coc
-set nowritebackup                       " This is recommended by coc
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set encoding=UTF-8
@@ -50,18 +48,10 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Airline
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-" Better Syntax Support
-Plug 'sheerun/vim-polyglot'
 
 " File Explorer
 Plug 'preservim/nerdtree'
 
-" Fuzzy finder
-Plug 'airblade/vim-rooter'
-
-" File Icon
-Plug 'ryanoasis/vim-devicons'
 " Comment code
 Plug 'preservim/nerdcommenter'
 
@@ -80,6 +70,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+
+" For icon
+Plug 'ryanoasis/vim-devicons'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
 "
 " Theme for most stuff
@@ -92,15 +87,13 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 
 " Switch to your current theme
-let g:airline_theme = 'gruvbox'
+"let g:airline_theme = 'gruvbox'
 
 " Always show tabs
 set showtabline=4
 
 " We don't need to see things like -- INSERT -- anymore
 set noshowmode
-
-
 " Mapping 
 
 " Alternate way to save
@@ -136,3 +129,5 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 EOF
+
+let g:NERDCustomDelimiters = {  'javascriptreact': { 'left': '//', 'leftAlt': '{/*', 'rightAlt': '*/}' } }
