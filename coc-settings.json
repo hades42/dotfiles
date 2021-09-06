@@ -1,6 +1,8 @@
 {
   "clangd.path": "/usr/local//Cellar/llvm/12.0.1/bin/clangd",
+  "coc.preferences.colorSupport": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "html",
     "css",
     "markdown",
     "cpp",
