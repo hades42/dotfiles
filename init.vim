@@ -52,27 +52,6 @@ endif
 
 
 let g:mapleader = "\<Space>"
-"syntax on 
-set nowrap
-set noerrorbells
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab
-set smartindent
-set smartcase
-set incsearch
-set scrolloff=8
-set signcolumn=yes 
-set nu
-set mouse=a
-set ruler
-set clipboard=unnamedplus               " Copy paste between vim and everything else
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
-set encoding=UTF-8
-set nocompatible
-set shell=/usr/local/bin/fish
-filetype plugin on
 
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/NerdTree.vim
@@ -85,8 +64,31 @@ source $HOME/.config/nvim/plug-config/fzfConfig.vim
 source $HOME/.config/nvim/plug-config/Telesope.nvim.vim
 source $HOME/.config/nvim/plug-config/treeSitter.vim
 source $HOME/.config/nvim/plug-config/markdown.vim
+source $HOME/.config/nvim/plug-config/htmlTemplate.vim
 "source $HOME/.config/nvim/plug-config/lspConfig.vim
 "source $HOME/.config/nvim/plug-config/completion.vim
+
+set signcolumn=yes 
+"syntax on 
+set nowrap
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set smartcase
+set incsearch
+set scrolloff=8
+set nu
+set mouse=a
+set ruler
+set clipboard=unnamedplus               " Copy paste between vim and everything else
+set splitbelow                          " Horizontal splits will automatically be below
+set splitright                          " Vertical splits will automatically be to the right
+set encoding=UTF-8
+set nocompatible
+set shell=/usr/local/bin/fish
+filetype plugin on
 
 " Theme for most stuff
 colorscheme gruvbox
@@ -150,3 +152,6 @@ let g:vimwiki_list = [{'path': '~/Desktop/Notes',
                       \ 'index': 'Wiki'}]
 let g:vimwiki_global_ext = 0
 
+hi default CocUnusedHighlight ctermfg=DarkGray
+hi default link CocErrorHighlight   CocUnderline 
+hi default link CocWarningHighlight CocUnderline
