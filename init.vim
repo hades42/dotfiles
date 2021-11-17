@@ -86,6 +86,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set encoding=UTF-8
+set noswapfile
 set nocompatible
 set shell=/usr/local/bin/fish
 filetype plugin on

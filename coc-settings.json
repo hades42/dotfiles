@@ -1,16 +1,18 @@
 {
-  "clangd.path": "/usr/local//Cellar/llvm/12.0.1/bin/clangd",
-  "coc.preferences.colorSupport": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "html",
-    "css",
-    "markdown",
-    "cpp",
-    "json",
-    "javascript",
-    "javascriptreact"
-  ],
-  "html.autoClosingTags": true,
-  "javascript.autoClosingTags": true,
-  "typescript.autoClosingTags": true
+    "clangd.path": "/Users/nguyenlaso42/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+    "coc.preferences.colorSupport": true,
+    "coc.preferences.formatOnSaveFiletypes": [
+        "html",
+        "css",
+        "markdown",
+        "cpp",
+        "json",
+        "javascript",
+        "javascriptreact",
+        "typescript"
+    ],
+    "html.autoClosingTags": true,
+    "javascript.autoClosingTags": true,
+    "typescript.autoClosingTags": true,
+    "prettier.tabWidth": 4
 }
