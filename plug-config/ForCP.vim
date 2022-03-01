@@ -7,4 +7,4 @@ endfunction
 
 
 "command! -nargs=0 CompileAndRun call TermWrapper(printf('g++ -std=c++17 %s && ./a.out' , expand('%')))
-autocmd FileType cpp nnoremap <C-b> :w <CR> :!g++ -std=c++17 % -o a<CR>
+autocmd FileType cpp nnoremap <C-b> :w <CR> :!g++-11 % -o a<CR>

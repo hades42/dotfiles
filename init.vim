@@ -39,6 +39,9 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 Plug 'vimwiki/vimwiki'
+
+"Plug 'davidhalter/jedi-vim'
+
 call plug#end()
 
 " auto-install vim-plug
@@ -87,6 +90,8 @@ set splitbelow                          " Horizontal splits will automatically b
 set splitright                          " Vertical splits will automatically be to the right
 set encoding=UTF-8
 set noswapfile
+set spelllang=en,cjk
+set spellsuggest=best,9
 set nocompatible
 set shell=/usr/local/bin/fish
 filetype plugin on

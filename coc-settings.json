@@ -1,18 +1,50 @@
 {
-    "clangd.path": "/Users/nguyenlaso42/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
     "coc.preferences.colorSupport": true,
+    "prettier.tabWidth": 4,
     "coc.preferences.formatOnSaveFiletypes": [
         "html",
         "css",
         "markdown",
-        "cpp",
         "json",
         "javascript",
         "javascriptreact",
-        "typescript"
+        "typescript",
+        "py"
     ],
     "html.autoClosingTags": true,
     "javascript.autoClosingTags": true,
     "typescript.autoClosingTags": true,
-    "prettier.tabWidth": 4
+    "clangd.disableDiagnostics": "true",
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/13.0.0/clangd_13.0.0/bin/clangd",
+
+    "jedi.enable": true,
+    "jedi.startupMessage": false,
+    "jedi.markupKindPreferred": "plaintext",
+    "jedi.trace.server": "off",
+    "jedi.jediSettings.autoImportModules": [],
+    "jedi.jediSettings.caseInsensitiveCompletion": true,
+    "jedi.jediSettings.debug": false,
+    "jedi.executable.args": [],
+    "jedi.codeAction.nameExtractFunction": "jls_extract_def",
+    "jedi.codeAction.nameExtractVariable": "jls_extract_var",
+    "jedi.completion.disableSnippets": false,
+    "jedi.completion.resolveEagerly": false,
+    "jedi.completion.ignorePatterns": [],
+    "jedi.diagnostics.enable": true,
+    "jedi.diagnostics.didOpen": true,
+    "jedi.diagnostics.didChange": true,
+    "jedi.diagnostics.didSave": true,
+    "jedi.hover.enable": true,
+    "jedi.hover.disable.keyword.all": false,
+    "jedi.hover.disable.keyword.names": [],
+    "jedi.hover.disable.keyword.fullNames": [],
+    "jedi.workspace.extraPaths": [],
+    "jedi.workspace.symbols.maxSymbols": 20,
+    "jedi.workspace.symbols.ignoreFolders": [
+        ".nox",
+        ".tox",
+        ".venv",
+        "__pycache__",
+        "venv"
+    ]
 }
