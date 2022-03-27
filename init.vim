@@ -161,3 +161,10 @@ let g:vimwiki_global_ext = 0
 hi default CocUnusedHighlight ctermfg=DarkGray
 hi default link CocErrorHighlight   CocUnderline 
 hi default link CocWarningHighlight CocUnderline
+
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
+
